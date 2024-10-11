@@ -995,7 +995,7 @@ section:not(.sec1) .centre h2, section:not(.sec1) .centre h3 {
         height: 250px;
         overflow-y: auto;
         font-size: .7em;
-        text-align: center;
+        text-align: left;
         overflow-x: hidden;
     }  
 }

@@ -1002,6 +1002,10 @@ nav ul::after {
         width: 30px;
     }
 
+    #head_bottom {
+        text-align: center;
+    }
+
     .profil {
         width: 200px;
         margin: 0;
