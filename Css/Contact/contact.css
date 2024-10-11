@@ -70,11 +70,20 @@
 
 }
 
+h1, h2, h3, a {
+    font-family: "nunito", sans-serif;
+}
+
+p {
+    font-family: "lato", sans-serif;
+}
+
 body {
     background-color: var(--bg-cyan);
 }
 
 nav {
+    position: absolute;
     width: 100%;
     z-index: 1;
 }
@@ -198,7 +207,6 @@ nav ul li a, .dropdown-content a {
     display: block;
     padding: 16px 18px;
     text-decoration: none;
-    font-family: roboto, sans-serif;
     font-size: 1.3em;
     font-weight: bold;
     text-transform: capitalize;
@@ -437,7 +445,7 @@ nav ul::after {
 }
 
 .div-form {
-    height: 0;
+    min-height: 0;
     opacity: 0;
     max-width: 400px;
     width: 80%;
@@ -454,12 +462,16 @@ nav ul::after {
 }
 
 .div-form.unroll {
-    height: 85vh;
+    min-height: 85vh;
     opacity: 1;
 }
 
 form.unroll * {
     opacity: 1;
+}
+
+form.unroll {
+    min-height: 70vh;
 }
 
 form {
@@ -468,7 +480,7 @@ form {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    height: 80%;
+    min-height: 0;
 }
 
 form * {
@@ -481,7 +493,7 @@ input, textarea {
     border: none;
     border-bottom: 2px solid var(--cyan-border-s);
     height: 50px;
-    font-family: roboto, sans-serif;
+    font-family: "lato", sans-serif;
     font-size: 1.2em;
     outline: none;
     transition: .5s ease;
@@ -514,7 +526,7 @@ form button {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding-left: 20px;
-    font-family: roboto, sans-serif;
+    font-family: "lato", sans-serif;
     cursor: pointer;
     transition: background .3s ease;
     font-weight: bold;
@@ -655,10 +667,19 @@ form button:active {
         text-align: center;
       }
 
+      form button {
+        bottom: 20px;
+    }
+
       .div-form {
         transform: translateX(50%);
         right: 50%;
       }
+
+      .div-form.unroll {
+        min-height: 75vh;
+        opacity: 1;
+}
 
       .div-form.unroll.back {
         z-index: -1;
@@ -677,8 +698,8 @@ form button:active {
         height: 75vh;
     }
 
-    form button {
-        bottom: 50px;
+    form.unroll {
+        min-height: 60vh;
     }
 
     .foot > * {
@@ -688,10 +709,18 @@ form button:active {
 
 @media screen and (width <= 800px) {
 
+    #map {
+        position: relative;
+      }  
+
     .div-form.unroll {
-        height: 70vh;
+        min-height: 85vh;
         max-width: 350px;
         width: 80%;
+    }
+
+    form button {
+        bottom: 50px;
     }
 
     .foot {
@@ -699,6 +728,7 @@ form button:active {
         height: auto;
         gap: 10px;
         transition: .5s ease;
+        position: relative;
     }
 
     .foot.back {
@@ -709,8 +739,8 @@ form button:active {
 
 @media screen and (width <= 640px) {
 
-    form button {
-        bottom: 20px;
+    .stack {
+        width: 30px;
     }
 
     .stack::after {
@@ -728,7 +758,21 @@ form button:active {
         z-index: -1;
     }
 
+    .foot {
+        flex-direction: column;
+    }
+
     .map-contact {
         font-size: 1.5em;
+      }
+
+      .socials-links {
+        align-self: center;
+        margin-bottom: 25px;
+      }
+
+      .follow {
+        align-self: center;
+        margin-bottom: 45px;
       }
 }

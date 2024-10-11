@@ -70,6 +70,71 @@
 
 }
 
+.left-hidden-element {
+    opacity: 0;
+    transform: translateX(-50vw); /* Déplace vers le bas pour l'effet de transition */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .lite-left-hidden-element {
+    opacity: 0;
+    transform: translateX(-100px); /* Déplace vers le bas pour l'effet de transition */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .right-hidden-element {
+    opacity: 0;
+    transform: translateX(800px); /* Déplace vers le bas pour l'effet de transition */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .lite-right-hidden-element {
+    opacity: 0;
+    transform: translateX(100px); /* Déplace vers le bas pour l'effet de transition */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateX(0); /* Remet en place */
+  }
+
+
+  .bottom-hidden-element {
+    opacity: 0;
+    transform: translateY(10%); /* Déplace vers le bas pour l'effet de transition */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .lite-bottom-hidden-element {
+    opacity: 0;
+    transform: translateY(100px); /* Déplace vers le bas pour l'effet de transition */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .lite-top-hidden-element {
+    opacity: 0;
+    transform: translateY(-100px); /* Déplace vers le bas pour l'effet de transition */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .bottom-visible {
+    opacity: 1;
+    transform: translateY(0); /* Remet en place */
+  }
+
+  h1, h2, h3 {
+    font-family: "lora", sans-serif;
+}
+
+p, a {
+    font-family: "open sans", sans-serif;
+}
+
+  main {
+    overflow-x: hidden;
+  }
+
 nav {
     width: 100%;
     z-index: 3;
@@ -194,7 +259,7 @@ nav ul li a, .dropdown-content a {
     display: block;
     padding: 16px 18px;
     text-decoration: none;
-    font-family: roboto, sans-serif;
+    font-family: "open sans", sans-serif;
     font-size: 1.3em;
     font-weight: bold;
     text-transform: capitalize;
@@ -455,7 +520,7 @@ main {
 
 .resume {
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: "open sans", sans-serif;
     font-size: 1.5em;
     display: flex;
     align-items: center;
@@ -494,7 +559,9 @@ main {
     background-size: cover;
     transition: .5s ease;
     position: relative;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @property --angle {
@@ -540,13 +607,8 @@ main {
 
 .profil img {
     border-radius: 50%;
-    width: 200px;
+    width: 100%;
     aspect-ratio: 1/1;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
@@ -561,7 +623,7 @@ main {
 .center>h1 {
     width: 100%;
     text-align: center;
-    font-family: roboto, sans-serif;
+    font-family: "lora", sans-serif;
     font-size: 6em;
     text-transform: uppercase;
     border: 2px solid var(--amber-border-h);
@@ -569,17 +631,17 @@ main {
 }
 
 .topic {
-    font-family: roboto, sans-serif;
+    font-family: "open sans", sans-serif;
     font-size: 2em;
-    font-weight: lighter;
 }
 
 .topic>span {
     font-weight: bold;
+    font-family: "lora", sans-serif;
 }
 
 .bio {
-    font-family: roboto, sans-serif;
+    font-family: "open sans", sans-serif;
     font-size: 1.1em;
 }
 
@@ -606,7 +668,7 @@ main {
 }
 
 .numbers div p {
-    font-family: roboto, sans-serif;
+    font-family: "open sans", sans-serif;
     font-size: 5em;
     color: var(--hight-ctr-txt-amber);
     font-weight: bold;
@@ -621,7 +683,7 @@ main {
 }
 
 .my-works h1 {
-    font-family: roboto, sans-serif;
+    font-family: "lora", sans-serif;
     font-size: 1.8em;
     color: var(--links-text-amber);
 }
@@ -639,7 +701,7 @@ main {
 }
 
 .my-works div p {
-    font-family: roboto, sans-serif;
+    font-family: "open sans", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -647,7 +709,7 @@ main {
 }
 
 .my-works div>p span {
-    font-family: roboto, sans-serif;
+    font-family: "lora", sans-serif;
     font-size: 1.3em;
     font-weight: bold;
     display: block;
@@ -719,6 +781,10 @@ main {
         display: none;
     }
 
+    .profil:hover {
+        transform: none;
+    }
+
     #end-ul {
         float: none;
     }
@@ -740,21 +806,8 @@ main {
         font-size: 3.5em;
     }
 
-    .profil img {
-        width: 200px;
-        transition: .5s linear;
-    }
-
     .profil {
         width: 200px;
-    }
-
-    .profil:hover {
-        transform: scale(1.2);
-    }
-
-    .profil img:hover {
-        transform: scale(1);
     }
 }
 
@@ -819,14 +872,6 @@ main {
     .numbers div p {
         font-size: 3em;
     }
-
-    .profil img {
-        width: 350px;
-    } 
-
-    .profil {
-        width: 350px;
-    }
 }
 
 @media screen and (max-width: 800px){
@@ -867,7 +912,7 @@ main {
 
 .section2 {
     padding: 0 100px 0 100px;
-    font-family: roboto, sans-serif;
+    font-family: "open sans", sans-serif;
     width: 100%;
 }
 
