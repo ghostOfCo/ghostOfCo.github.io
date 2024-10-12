@@ -654,6 +654,14 @@ h3 {
     .section1 img {
         width: 200px;
     }
+
+    h2 {
+        font-size: 3em;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+    }
 }
 
 .section2 {
@@ -891,6 +899,14 @@ h3 {
     .section4 {
         padding: 0 20px;
     }
+
+    .section4 h2 {
+        margin-right: 0px;
+    }
+    
+    .section4 h3 {
+        margin-right: 0px;
+    }
   }
   
 
@@ -955,6 +971,16 @@ h3 {
   @media screen and (max-width: 640px){
     .section5 {
         padding: 0 20px;
+    }
+
+    .section5 h2 {
+        text-align: left;
+        margin-right: 0px;
+    }
+    
+        .section5 h3 {
+        text-align: left;
+        margin-right: 0px;
     }
   }
 
@@ -1050,6 +1076,15 @@ h3 {
 
       .section6 {
         padding: 0 20px;
+    }
+
+    .section6 h2 {
+        margin-right: 0px;
+    }
+    
+        .section6 h3 {
+        text-align: left;
+        margin-right: 0px;
     }
     
   }

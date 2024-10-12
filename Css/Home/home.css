@@ -1060,7 +1060,9 @@ footer {
     border-top-style: solid;
     background-color: var(--bg-cyan-soft);
     height: 30vh;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
