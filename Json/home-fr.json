@@ -22,7 +22,7 @@
     {
         "pres_h2" : "Salut je suis <br> <span id=\"pres_h2_span\"></span>",
         "pres_h2_span" : "LAWSON Cornélius",
-        "pres_p1" : "I'm :",
+        "pres_p1" : "je suis :",
         "pres_bio" : "<strong>Développeur et Designer</strong> <br> J'ai débuté dans le domaine du freelance, et j'ai suivi un bon nombre de formations sur des sites et plateformes réputés, notamment:",
         "pres_btn" : "Voir ma bio...",
         "pres_info_txt1" : "années <br> d'expérience",
